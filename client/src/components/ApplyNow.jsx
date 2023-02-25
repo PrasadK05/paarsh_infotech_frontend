@@ -7,7 +7,23 @@ import {
   Text,
   useToast,
 } from "@chakra-ui/react";
+import axios from "axios";
 import React, { useState } from "react";
+
+let postApp = async (data) => {
+  try {
+    let res = await axios.post(
+      "https://paarsh-server.onrender.com/apply",
+      data
+    );
+
+    if (res.data.status) {
+      return true;
+    }
+  } catch (error) {
+    return false;
+  }
+};
 
 let init = {
   name: "",
@@ -28,7 +44,24 @@ export default function ApplyNow() {
   let handleClick = (e) => {
     e.preventDefault();
 
-    setData(init);
+    postApp(data)
+      .then((res) => {
+        toast({
+          title: "upload successfull.",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+        });
+        setData(init);
+      })
+      .catch((err) => {
+        return toast({
+          title: "upload unsuccessfull.",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+        });
+      });    
   };
 
   let { name, email, contact, course } = data;
@@ -44,7 +77,7 @@ export default function ApplyNow() {
       borderRadius={"10px"}
     >
       <Text fontSize={"4xl"} as="b">
-       Apply Now
+        Apply Now
       </Text>
       <Box>
         <form onSubmit={handleClick}>
@@ -81,20 +114,24 @@ export default function ApplyNow() {
             />
           </FormControl>
 
-          <Select
-            placeholder="Select Course"
-            mt={"20px"}
-            name="course"
-            value={course}
-            onChange={handleChange}
-          >
-            <option value="Web Development">Web Development</option>
-            <option value="Android-App Development">
-              Android-App Development
-            </option>
-            <option value="Digital Marketing">Digital Marketing</option>
-            <option value="IOS Development">IOS Development</option>
-          </Select>
+          <FormControl mt={"20px"}>
+            <FormLabel>Select Course</FormLabel>
+
+            <Select
+              placeholder="Select Course"
+              mt={"20px"}
+              name="course"
+              value={course}
+              onChange={handleChange}
+            >
+              <option value="Web Development">Web Development</option>
+              <option value="Android-App Development">
+                Android-App Development
+              </option>
+              <option value="Digital Marketing">Digital Marketing</option>
+              <option value="IOS Development">IOS Development</option>
+            </Select>
+          </FormControl>
           <FormControl mt={"20px"} bg="#7bafeb" border={"none"} color="white">
             <Input type={"submit"} value="Submit" />
           </FormControl>

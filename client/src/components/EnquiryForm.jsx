@@ -8,7 +8,23 @@ import {
   Textarea,
   useToast,
 } from "@chakra-ui/react";
+import axios from "axios";
 import React, { useState } from "react";
+
+let postApp = async (data) => {
+  try {
+    let res = await axios.post(
+      "https://paarsh-server.onrender.com/enquiry",
+      data
+    );
+
+    if (res.data.status) {
+      return true;
+    }
+  } catch (error) {
+    return false;
+  }
+};
 
 let init = {
   name: "",
@@ -28,8 +44,24 @@ export default function EnquiryForm() {
 
   let handleClick = (e) => {
     e.preventDefault();
-    console.log(data);
-    setData(init);
+    postApp(data)
+      .then((res) => {
+        toast({
+          title: "upload successfull.",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+        });
+        setData(init);
+      })
+      .catch((err) => {
+        return toast({
+          title: "upload unsuccessfull.",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+        });
+      });
   };
   let { name, email, subject, message } = data;
   return (
