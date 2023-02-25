@@ -15,9 +15,12 @@ import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 import { FiMenu } from "react-icons/fi";
+import { BsPlusLg } from "react-icons/bs";
+import { BiMinus } from "react-icons/bi";
 
 export default function Navbar() {
-  let [state, setState] = useState(false);
+  const [state, setState] = useState(false);
+  const [show, setShow] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
 
@@ -93,10 +96,14 @@ export default function Navbar() {
               </Link>
             </Box>
             <Box>
-              <Text onMouseEnter={handleMouseEnter}>Course</Text>
+              <Link to="/course">
+                <Text onMouseEnter={handleMouseEnter}>Course</Text>
+              </Link>
             </Box>
             <Box>
-              <Text>Contact</Text>
+              <Link to="/contact">
+                <Text>Contact</Text>
+              </Link>
             </Box>
           </Box>
           <Button
@@ -124,10 +131,18 @@ export default function Navbar() {
             color="black"
             zIndex={100}
           >
-            <Text p="5px 10px">Web Development</Text>
-            <Text p="5px 10px">Graphic Design</Text>
-            <Text p="5px 10px">Android App Development</Text>
-            <Text p="5px 10px">Digital Marketing</Text>
+            <Link to="/course">
+              <Text p="5px 10px">Web Development</Text>
+            </Link>
+            <Link to="/course">
+              <Text p="5px 10px">Graphic Design</Text>
+            </Link>
+            <Link to="/course">
+              <Text p="5px 10px">Android App Development</Text>
+            </Link>
+            <Link to="/course">
+              <Text p="5px 10px">Digital Marketing</Text>
+            </Link>
           </Box>
         </Box>
       </Box>
@@ -140,18 +155,38 @@ export default function Navbar() {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-
-          <DrawerBody>
+          <DrawerBody mt="20px">
             <Box>
               <Link to={"/"}>
                 <Text>Home</Text>
               </Link>
             </Box>
-            <Box>
-              <Text onMouseEnter={handleMouseEnter}>Course</Text>
+            <Box
+              display={"flex"}
+              justifyContent="space-between"
+              onClick={() => setShow(!show)}
+            >
+              <Text>Course</Text>
+              {show ? <BiMinus /> : <BsPlusLg />}
+            </Box>
+            <Box display={show ? "block" : "none"}>
+              <Link to="/course">
+                <Text p="5px 10px">Web Development</Text>
+              </Link>
+              <Link to="/course">
+                <Text p="5px 10px">Graphic Design</Text>
+              </Link>
+              <Link to="/course">
+                <Text p="5px 10px">Android App Development</Text>
+              </Link>
+              <Link to="/course">
+                <Text p="5px 10px">Digital Marketing</Text>
+              </Link>
             </Box>
             <Box>
-              <Text>Contact</Text>
+              <Link to="/contact">
+                <Text>Contact</Text>
+              </Link>
             </Box>
           </DrawerBody>
         </DrawerContent>
@@ -159,3 +194,5 @@ export default function Navbar() {
     </>
   );
 }
+
+// onMouseEnter={handleMouseEnter}
