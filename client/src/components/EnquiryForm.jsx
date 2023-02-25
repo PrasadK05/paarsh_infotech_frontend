@@ -124,6 +124,7 @@ export default function EnquiryForm() {
               value="Submit"
               display={"block"}
               width={"100px"}
+              cursor={"pointer"}
             />
           </FormControl>
         </form>

@@ -133,7 +133,7 @@ export default function ApplyNow() {
             </Select>
           </FormControl>
           <FormControl mt={"20px"} bg="#7bafeb" border={"none"} color="white">
-            <Input type={"submit"} value="Submit" />
+            <Input type={"submit"} value="Submit" cursor={"pointer"}/>
           </FormControl>
         </form>
       </Box>

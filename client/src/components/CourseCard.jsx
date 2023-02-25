@@ -1,5 +1,6 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function CourseCard({ link, head, description }) {
   return (
@@ -16,7 +17,9 @@ export default function CourseCard({ link, head, description }) {
         {head}
       </Text>
       <Text>{description}</Text>
+      <Link to="/course">
       <Text _hover={{ color: "#1a202c" }}>Apply Now</Text>
+      </Link>
     </Box>
   );
 }
