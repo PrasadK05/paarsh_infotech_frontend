@@ -91,11 +91,16 @@ export default function Admin() {
         <Button onClick={handleEnq}>Enquiries</Button>
       </Box>
       <Box
-        w="70%"
+        w={{ base: "100%", sm: "100%", md: "80%", lg: "70%" }}
         m={"auto"}
         display={"grid"}
         gap="10px"
-        gridTemplateColumns={"repeat(4,1fr)"}
+        gridTemplateColumns={{
+          base: "repeat(2,1fr)",
+          sm: "repeat(2,1fr)",
+          md: "repeat(4,1fr)",
+          lg: "repeat(4,1fr)",
+        }}
         mt="30px"
       >
         {All_data &&
