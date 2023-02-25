@@ -28,7 +28,7 @@ export default function Footer() {
       >
         <Box>
           <Image
-            src="http://paarshinfotech.com/assets/img/mpipvt.jpg"
+            src="/assets/paarsh_logo3.jpg"
             alt="error"
             mb="10px"
           />

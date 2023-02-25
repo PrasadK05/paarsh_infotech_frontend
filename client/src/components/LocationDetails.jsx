@@ -15,7 +15,7 @@ export default function LocationDetails() {
         <Box>
           <HStack>
             <Image
-              src="https://as2.ftcdn.net/v2/jpg/02/54/62/25/1000_F_254622588_6OClHyYpak64rVI8y9QVjUvDlStsDEu9.jpg"
+              src="/assets/location.jpg"
               alt="error"
               h="20px"
               w="20px"
@@ -23,10 +23,10 @@ export default function LocationDetails() {
             <Text>
               {" "}
               Address: Paarsh Infotech Office no 2 Bhakti Apartment, Near Rasoi
-              Hotel , Suchita{" "}
+              Hotel{" "}
             </Text>
           </HStack>
-          <Text pl="26px">Nagar Mumbai Naka Nashik 422001</Text>
+          <Text pl="26px">Suchita Nagar Mumbai Naka Nashik 422001</Text>
         </Box>
 
         <Divider />
@@ -34,7 +34,7 @@ export default function LocationDetails() {
         <Box>
           <HStack>
             <Image
-              src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+              src="/assets/mail.png"
               alt="error"
               h="20px"
               w="20px"
@@ -46,7 +46,7 @@ export default function LocationDetails() {
         <Box>
           <HStack>
             <Image
-              src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+              src="/assets/mail.png"
               alt="error"
               h="20px"
               w="20px"
@@ -58,7 +58,7 @@ export default function LocationDetails() {
         <Box>
           <HStack>
             <Image
-              src="https://cdn-icons-png.flaticon.com/512/890/890547.png"
+              src="/assets/phone.png"
               alt="error"
               h="20px"
               w="20px"

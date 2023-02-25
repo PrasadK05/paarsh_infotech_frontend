@@ -8,7 +8,7 @@ export default function Course() {
   return (
     <>
     <Banner
-    link={"http://paarshinfotech.com/assets/img/web-development.jpg"}
+    link={"assets/banner2.jpg"}
     />
       <Box
         width={{ base: "95%", sm: "95%", md: "95%", lg: "60%" }}
@@ -52,7 +52,7 @@ export default function Course() {
           our website development team.
         </Text>
         <Image
-          src="http://paarshinfotech.com/assets/img/web-development-1.jpg"
+          src="/assets/web-development-1.jpg"
           alt="error"
           width={{ base: "100%", sm: "100%", md: "60%", lg: "60%" }}
           m="auto"

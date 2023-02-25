@@ -5,25 +5,25 @@ import CourseCard from "./CourseCard";
 let data = [
   {
     id: 1,
-    img: "http://paarshinfotech.com/assets/img/paarsh-website-icons-01.svg",
+    img: "/assets/web.png",
     text: "Web development is the work involved in developing a Web site for the Internet.We believe in designing a user-friendly website to beat the industry standard.",
     head: "Web Development",
   },
   {
     id: 2,
-    img: "http://paarshinfotech.com/assets/img/paarsh-website-icons-03.svg",
+    img: "/assets/android.png",
     text: "Mobile devices and smartphones have become increasingly popular and important. They have completely transformed the way we do business today.",
     head: "Android-App Development",
   },
   {
     id: 3,
-    img: "http://paarshinfotech.com/assets/img/paarsh-website-icons-06.svg",
+    img: "/assets/apple.png",
     text: "Digital marketing is the component of marketing that utilizes internet and online based digital technologies.",
     head: "Digital Marketing",
   },
   {
     id: 4,
-    img: "http://paarshinfotech.com/assets/img/paarsh-website-icons-04.svg",
+    img: "/assets/digital.png",
     text: "IOS Developers design and build applications for mobile devices running Apple’s iOS operating software.",
     head: "IOS Development",
   },

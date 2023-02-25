@@ -59,13 +59,13 @@ export default function Navbar() {
           >
             <Link to={"/"}>
               <Image
-                src="http://paarshinfotech.com/assets/img/logo4.png"
+                src="/assets/parsh_logo2.png"
                 alt="error"
               />
             </Link>
             <Link to="/">
               <Image
-                src="http://paarshinfotech.com/assets/img/sppipvt.jpg"
+                src="/assets/paarsh_logo1.jpg"
                 alt="error"
               />
             </Link>

@@ -7,7 +7,7 @@ import LocationDetails from "../components/LocationDetails";
 export default function Contact() {
   return (
     <>
-      <Banner link={"http://paarshinfotech.com/assets/img/about6.jpg"} />
+      <Banner link={"/assets/banner1.jpg"} />
       <Box
         w={{ base: "95%", sm: "95%", md: "95%", lg: "80%" }}
         m="auto"

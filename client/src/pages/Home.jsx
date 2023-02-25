@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
     <Banner
-    link="http://paarshinfotech.com/assets/img/about1.jpg"
+    link="/assets/banner3.jpg"
     head="Best Software Development Company In Nashik"
     />
     <OurCourses/>
