@@ -9,13 +9,11 @@ Responsive design of paarsh infotech pvt. ltd. website, built by React JS, Redux
 - Redux
 - Thunk
 
-# Layout
+# Features
+- Home Page
+- Course Page
+- Contact Page
 
-## Home Page
-![home]()
-
-## Course Page
-![Course]()
 
 # Author
 [Prasad Karde](https://github.com/PrasadK05)
